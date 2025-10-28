@@ -229,3 +229,282 @@ public class FinalProjectOutput {
  printCentered(CYAN + String.format("%.2f / %.2f = %.2f", num1, num2, num1 / num2) + RESET);
  System.out.println();
  printCentered(YELLOW + "Press Enter..." + RESET);
+ scanner.nextLine();
+ } catch (InputMismatchException e) {
+ clearConsole();
+ printCentered(RED + "X           X" + RESET);
+ printCentered(RED + "  X       X  " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "       X      " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "  X        X " + RESET);
+ printCentered(RED + "X            X" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ System.out.println(YELLOW + " Invalid input! Numbers only. Press [ENTER]" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ scanner.next();
+ scanner.nextLine();
+ }
+ }
+ }
+
+
+ private static void handleAreaCircumference(Scanner scanner) {
+ while (true) {
+ clearConsole();
+ printCentered(BLUE + "╔════════════════════════════════════════════════════════╗" + RESET);
+ printCentered(YELLOW + " 🔵 AREA/CIRCUMFERENCE 🔵 " + RESET);
+ printCentered(BLUE + "╚════════════════════════════════════════════════════════╝" + RESET);
+ System.out.println();
+ printCentered(GREEN + "1: Circle" + RESET);
+ printCentered(YELLOW + "2: Back" + RESET);
+ System.out.println();
+ printCentered(YELLOW + "Choice (1-2): " + RESET);
+  System.out.println();
+ printCentered(BLUE + "╔══════════════════════════════════════════════════╗" + RESET);
+ printCentered(YELLOW + " " + RESET);
+ printCentered(BLUE + "╚══════════════════════════════════════════════════╝" + RESET);
+ System.out.print("➡ ");
+ try {
+ int shapeChoice = scanner.nextInt();
+ scanner.nextLine();
+ if (shapeChoice == 2)
+ return;
+ if (shapeChoice == 1) {
+ System.out.print("Enter radius: ");
+ double radius = scanner.nextDouble();
+ scanner.nextLine();
+ double area = Math.PI * radius * radius;
+ double circumference = 2 * Math.PI * radius;
+ printCentered(CYAN + String.format("Area: %.2f", area) + RESET);
+ printCentered(CYAN + String.format("Circumference: %.2f", circumference) + RESET);
+ } else {
+ clearConsole();
+ printCentered(RED + "X           X" + RESET);
+ printCentered(RED + "  X       X  " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "       X      " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "  X        X " + RESET);
+ printCentered(RED + "X            X" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ System.out.println(YELLOW + " Invalid Choice! Press [ENTER] and Choose (1-2)" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ }
+ System.out.println();
+ printCentered(YELLOW + "Press Enter..." + RESET);
+ scanner.nextLine();
+ } catch (InputMismatchException e) {
+ clearConsole();
+ printCentered(RED + "X           X" + RESET);
+ printCentered(RED + "  X       X  " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "       X      " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "  X        X " + RESET);
+ printCentered(RED + "X            X" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ System.out.println(YELLOW + " Invalid input! Numbers only. Press [ENTER]" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ scanner.next();
+ scanner.nextLine();
+ }
+ }
+ }
+
+
+ private static void handleOddEven(Scanner scanner) {
+ clearConsole();
+ printCentered(BLUE + "╔════════════════════════════════════════════════════════╗" + RESET);
+ printCentered(YELLOW + " 🔢 ODD / EVEN CHECKER 🔢 " + RESET);
+ printCentered(BLUE + "╚════════════════════════════════════════════════════════╝" + RESET);
+ System.out.println();
+ System.out.print("Enter an integer: ");
+ try {
+ int num = scanner.nextInt();
+ scanner.nextLine();
+ if (num % 2 == 0)
+ printCentered(CYAN + num + " is EVEN." + RESET);
+ else
+ printCentered(CYAN + num + " is ODD." + RESET);
+ System.out.println();
+ printCentered(YELLOW + "Press Enter..." + RESET);
+  System.out.println();
+ printCentered(BLUE + "╔══════════════════════════════════════════════════╗" + RESET);
+ printCentered(YELLOW + " " + RESET);
+ printCentered(BLUE + "╚══════════════════════════════════════════════════╝" + RESET);
+ 
+ scanner.nextLine();
+ } catch (InputMismatchException e) {
+ clearConsole();
+ printCentered(RED + "X           X" + RESET);
+ printCentered(RED + "  X       X  " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "       X      " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "  X        X " + RESET);
+ printCentered(RED + "X            X" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ System.out.println(YELLOW + " Invalid input! Enter an integer. Press [ENTER]" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ scanner.next();
+ scanner.nextLine();
+ }
+ }
+
+
+ private static void handleConversion(Scanner scanner) {
+ while (true) {
+ clearConsole();
+ printCentered(BLUE + "╔════════════════════════════════════════════════════════╗" + RESET);
+ printCentered(YELLOW + " 🔄 UNIT CONVERSION 🔄 " + RESET);
+ printCentered(BLUE + "╚════════════════════════════════════════════════════════╝" + RESET);
+ System.out.println();
+ printCentered(GREEN + "1: Centimeters to Meters" + RESET);
+ printCentered(GREEN + "2: Centimeters to Millimeters" + RESET);
+ printCentered(YELLOW + "3: Back" + RESET);
+ System.out.println();
+ printCentered(YELLOW + "Enter your choice (1-3): " + RESET);
+  System.out.println();
+ printCentered(BLUE + "╔══════════════════════════════════════════════════╗" + RESET);
+ printCentered(YELLOW + " " + RESET);
+ printCentered(BLUE + "╚══════════════════════════════════════════════════╝" + RESET);
+ 
+ System.out.print("➡ ");
+ try {
+ int choice = scanner.nextInt();
+ scanner.nextLine();
+ if (choice == 3)
+ return;
+ if (choice == 1 || choice == 2) {
+ System.out.print("Enter value in centimeters: ");
+ double cm = scanner.nextDouble();
+ scanner.nextLine();
+ if (choice == 1)
+ printCentered(CYAN + String.format("%.2f cm = %.2f m", cm, cm / 100) + RESET);
+ else if (choice == 2)
+ printCentered(CYAN + String.format("%.2f cm = %.2f mm", cm, cm * 10) + RESET);
+ } else {
+ clearConsole();
+ printCentered(RED + "X           X" + RESET);
+ printCentered(RED + "  X       X  " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "       X      " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "  X        X " + RESET);
+ printCentered(RED + "X            X" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ System.out.println(YELLOW + " Invalid Choice! Press [ENTER] and Choose (1-3)" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ }
+ System.out.println();
+ printCentered(YELLOW + "Press Enter..." + RESET);
+ scanner.nextLine();
+ } catch (InputMismatchException e) {
+ clearConsole();
+ printCentered(RED + "X           X" + RESET);
+ printCentered(RED + "  X       X  " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "       X      " + RESET);
+ printCentered(RED + "    X   X    " + RESET);
+ printCentered(RED + "  X        X " + RESET);
+ printCentered(RED + "X            X" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ System.out.println(YELLOW + " Invalid input! Numbers only. Press [ENTER]" + RESET);
+ System.out.println(BLUE + " ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||" + RESET);
+ scanner.next();
+ scanner.nextLine();
+ }
+ }
+ }
+
+
+ private static void showLoadingScreen() {
+ clearConsole();
+ System.out.println();
+ printCentered(YELLOW + "LOADING..." + RESET);
+ System.out.println();
+ int totalWidth = 40;
+ int animationDuration = 1500; // milliseconds
+ int frameRate = 50; // milliseconds per frame
+ int numFrames = animationDuration / frameRate;
+ for (int i = 0; i <= numFrames; i++) {
+ clearConsole();
+ System.out.println();
+ printCentered(YELLOW + "LOADING..." + RESET);
+ System.out.println();
+ double progress = (double) i / numFrames;
+ int filledWidth = (int) (totalWidth * progress);
+ StringBuilder progressBar = new StringBuilder();
+ progressBar.append(GREY_BACKGROUND + " " + RESET); // Start of the bar outline
+ // Cyan filled portion with blue chevrons
+ for (int j = 0; j < filledWidth; j++) {
+ if (j % 2 == 0) {
+ progressBar.append(CYAN + BLACK_BACKGROUND + ">" + RESET);
+ } else {
+ progressBar.append(CYAN + BLACK_BACKGROUND + ">" + RESET);
+ }
+ }
+ // White empty portion
+ for (int j = filledWidth; j < totalWidth; j++) {
+ progressBar.append(WHITE + BLACK_BACKGROUND + " " + RESET);
+ }
+ progressBar.append(GREY_BACKGROUND + " " + RESET); // End of the bar outline
+ printCentered(progressBar.toString());
+ try {
+ Thread.sleep(frameRate);
+ } catch (InterruptedException e) {
+ e.printStackTrace();
+ }
+ }
+ System.out.println();
+ printCentered(GREEN + "Loading complete!" + RESET);
+ try {
+ Thread.sleep(500);
+ } catch (InterruptedException ignored) {
+ } // Short delay after completion
+ }
+
+
+ // Utility methods
+ private static void clearConsole() {
+ System.out.print("\033[H\033[2J");
+ System.out.flush();
+ }
+
+
+ private static void showRocketLoadingAnimation() {
+ System.out.println(YELLOW + "🚀 Loading..." + RESET);
+ try {
+ Thread.sleep(800);
+ } catch (InterruptedException ignored) {
+ }
+ }
+
+
+ private static void printCentered(String text) {
+ int width = 60;
+ int pad = (width - text.replaceAll("\033\\[[;\\d]*m", "").length()) / 2;
+ System.out.println(" ".repeat(Math.max(0, pad)) + text);
+ }
+
+
+ // Method to print the ASCII art
+ public static void printAsciiArt() {
+ 	clearConsole();
+printCentered("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠒⢦⡀⠀⠀⠀⠀⠀⠀");
+ printCentered("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠆⠀⣿⡇⠀⠀⠀⠀⠀⠀");
+ printCentered("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠞⢉⣽⡿⠀⠀⠀⠀⠀⠀⠀");
+ printCentered("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠋⢐⣾⣷⠁⠀⠀⠀⠀⠀⠀⠀");
+ printCentered("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠡⠤⣮⣿⣵⠆⠠⠤⣀⣀⡀⠀⠀");
+ printCentered("⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠏⠀⠐⢾⣽⣛⠟⠚⠛⠓⠒⠈⠱⡄");
+ printCentered("⠀⣀⣀⣤⣀⣤⣄⠠⡜⠃⠀⢀⣀⣼⣿⣿⠿⢦⣶⣶⣦⣿⣿⡟");
+ printCentered("⣾⣿⣿⠻⢿⣿⡇⠀⢫⣣⡱⣾⡿⣿⣿⣿⣆⣄⢀⢉⡉⣩⣿⠀");
+ printCentered("⢻⢻⡿⡎⠀⠀⢇⣀⣬⣷⠉⠙⠉⠙⣻⣿⠙⠓⠛⠿⣿⣿⠟⠀");
+ printCentered("⢸⣄⠈⢧⠀⠀⠸⡀⢀⣿⣤⣀⠀⠀⣺⡟⠿⣶⢦⣦⣤⡿⠀⠀");
+ printCentered("⠀⢻⣷⣼⡄⠀⠀⢱⣿⡿⠿⠾⠷⣶⣿⣷⣦⣌⢉⣻⠏⠁⠀⠀");
+ printCentered("⠀⠀⢧⣿⣷⡤⠒⠓⠁⠀⠀⠀⠀⠀⠀⠀⠉⠉⠋⠁⠀⠀⠀⠀");
+ printCentered("⠀⠀⠈⣚⡻⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+ printCentered("PLEASE GIVE US A THUMBS UP!! ^ _ ^");
+ }
+}
